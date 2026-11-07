@@ -7,9 +7,12 @@ export interface NavigationItem {
 export interface Project {
   id: number;
   title: string;
+  year: string;
+  role: string;
   description: string;
+  highlights: string[];
   technologies: string[];
-  image?: string;
+  image: string;
   githubUrl?: string;
   liveUrl?: string;
 }
@@ -20,9 +23,11 @@ export interface Experience {
   organization: string;
   period: string;
   description: string;
+  highlights: string[];
+  image?: string;
 }
 
-export interface Skill {
-  name: string;
+export interface SkillGroup {
   category: string;
+  skills: string[];
 }
