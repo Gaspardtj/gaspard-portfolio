@@ -13,7 +13,7 @@ import Contact from "./pages/Contacts";
 
 export default function App() {
   return (
-    <div className="flex min-h-screen flex-col bg-slate-950 text-white">
+    <div className="flex min-h-screen flex-col bg-white text-slate-900">
       <Navbar />
 
       <main className="mx-auto w-full max-w-6xl flex-1 px-6 pt-8 md:px-8">
@@ -29,10 +29,10 @@ export default function App() {
             path="*"
             element={
               <div className="py-32 text-center">
-                <h1 className="text-6xl font-bold text-cyan-400">
+                <h1 className="text-6xl font-bold text-sky-700">
                   404
                 </h1>
-                <p className="mt-4 text-slate-400">
+                <p className="mt-4 text-slate-600">
                   Sorry, this page doesn't exist.
                 </p>
               </div>

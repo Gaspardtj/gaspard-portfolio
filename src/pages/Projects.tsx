@@ -60,13 +60,13 @@ export default function Projects() {
           ].map((item) => (
             <div
               key={item.title}
-              className="rounded-2xl border border-white/10 bg-slate-900/70 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/30"
+              className="rounded-2xl border border-slate-200 bg-slate-50 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/30"
             >
-              <h3 className="mb-3 text-lg font-semibold text-white">
+              <h3 className="mb-3 text-lg font-semibold text-slate-900">
                 {item.title}
               </h3>
 
-              <p className="leading-7 text-slate-400">
+              <p className="leading-7 text-slate-600">
                 {item.description}
               </p>
             </div>
@@ -75,17 +75,17 @@ export default function Projects() {
       </section>
 
       {/* Collaboration Section */}
-      <section className="rounded-3xl border border-white/10 bg-slate-900 p-8 md:p-10">
+      <section className="rounded-3xl border border-slate-200 bg-sky-50 p-8 md:p-10">
 
-        <div className="mb-5 inline-flex rounded-xl bg-cyan-400/10 p-4 text-cyan-400">
+        <div className="mb-5 inline-flex rounded-xl bg-cyan-400/10 p-4 text-sky-700">
           <FaGithub size={30} />
         </div>
 
-        <h2 className="text-2xl font-bold text-white">
+        <h2 className="text-2xl font-bold text-slate-900">
           Interested in Collaborating?
         </h2>
 
-        <p className="mt-4 max-w-xl leading-7 text-slate-400">
+        <p className="mt-4 max-w-xl leading-7 text-slate-600">
           I'm passionate about developing practical software
           solutions and collaborating with other developers,
           organizations, and innovators to create meaningful

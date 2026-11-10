@@ -2,6 +2,7 @@
 import type { SkillGroup } from "../types";
 
 export const skillGroups: SkillGroup[] = [
+  { category: "Security", skills: ["Cybersecurity"] },
   {
     category: "Programming Languages",
     skills: ["Python", "Java", "JavaScript", "C++", "TypeScript"],

@@ -18,11 +18,11 @@ export default function About() {
           <Photo
             src={images.about}
             alt="Gaspard Tumusiime"
-            className="aspect-[4/5] w-full rounded-3xl border border-white/10 object-cover"
+            className="aspect-[4/5] w-full rounded-3xl border border-slate-200 object-cover"
           />
 
-          <div className="space-y-6 leading-8 text-slate-400">
-            <h2 className="text-2xl font-bold text-white">
+          <div className="space-y-6 leading-8 text-slate-600">
+            <h2 className="text-2xl font-bold text-slate-900">
               Hi, I'm Gaspard.
             </h2>
 
@@ -54,9 +54,9 @@ export default function About() {
             </p>
 
             <div className="grid gap-4 pt-3 sm:grid-cols-2">
-              <div className="rounded-xl border border-white/10 bg-slate-900 p-5">
-                <Target className="mb-3 text-cyan-400" />
-                <h3 className="font-semibold text-white">
+              <div className="rounded-xl border border-slate-200 bg-sky-50 p-5">
+                <Target className="mb-3 text-sky-700" />
+                <h3 className="font-semibold text-slate-900">
                   Career Focus
                 </h3>
                 <p className="mt-2 text-sm">
@@ -64,9 +64,9 @@ export default function About() {
                 </p>
               </div>
 
-              <div className="rounded-xl border border-white/10 bg-slate-900 p-5">
-                <Globe2 className="mb-3 text-cyan-400" />
-                <h3 className="font-semibold text-white">
+              <div className="rounded-xl border border-slate-200 bg-sky-50 p-5">
+                <Globe2 className="mb-3 text-sky-700" />
+                <h3 className="font-semibold text-slate-900">
                   Interests
                 </h3>
                 <p className="mt-2 text-sm">
@@ -85,23 +85,23 @@ export default function About() {
         />
 
         <div className="space-y-5">
-          <div className="rounded-2xl border border-white/10 bg-slate-900/70 p-7">
+          <div className="rounded-2xl border border-slate-200 bg-slate-50 p-7">
             <div className="flex flex-wrap items-start justify-between gap-4">
               <div>
-                <GraduationCap className="mb-4 text-cyan-400" size={30} />
-                <h3 className="text-xl font-semibold text-white">
+                <GraduationCap className="mb-4 text-sky-700" size={30} />
+                <h3 className="text-xl font-semibold text-slate-900">
                   BSc Software Engineering
                 </h3>
-                <p className="mt-2 text-slate-300">
+                <p className="mt-2 text-slate-700">
                   United States International University - Africa
                 </p>
               </div>
-              <span className="text-sm text-cyan-400">
+              <span className="text-sm text-sky-700">
                 2024 - 2028 (Expected)
               </span>
             </div>
 
-            <p className="mt-5 text-sm leading-7 text-slate-400">
+            <p className="mt-5 text-sm leading-7 text-slate-600">
               Relevant coursework includes System Analysis and
               Design, Introduction to Software Engineering,
               Website Design, Object-Oriented Programming,
@@ -109,18 +109,18 @@ export default function About() {
             </p>
           </div>
 
-          <div className="rounded-2xl border border-white/10 bg-slate-900/70 p-7">
-            <BookOpen className="mb-4 text-cyan-400" size={30} />
-            <h3 className="text-xl font-semibold text-white">
+          <div className="rounded-2xl border border-slate-200 bg-slate-50 p-7">
+            <BookOpen className="mb-4 text-sky-700" size={30} />
+            <h3 className="text-xl font-semibold text-slate-900">
               Secondary Education
             </h3>
-            <p className="mt-2 text-slate-300">
+            <p className="mt-2 text-slate-700">
               Uganda Advanced Certificate of Education — 2022
             </p>
-            <p className="mt-1 text-slate-300">
+            <p className="mt-1 text-slate-700">
               Uganda Certificate of Education — 2019
             </p>
-            <p className="mt-4 text-sm text-slate-400">
+            <p className="mt-4 text-sm text-slate-600">
               Recipient of the CNOOC Best Performer's Award
               for outstanding UCE academic performance (2020).
               Served as Sanitation Prefect from 2021 to 2022.
@@ -139,7 +139,7 @@ export default function About() {
             {profile.interests.map((interest) => (
               <span
                 key={interest}
-                className="rounded-full border border-white/10 bg-slate-900 px-4 py-2 text-sm text-slate-300"
+                className="rounded-full border border-slate-200 bg-sky-50 px-4 py-2 text-sm text-slate-700"
               >
                 {interest}
               </span>
@@ -156,10 +156,10 @@ export default function About() {
             {profile.languages.map((language) => (
               <div
                 key={language.name}
-                className="flex justify-between rounded-xl border border-white/10 bg-slate-900 px-5 py-4"
+                className="flex justify-between rounded-xl border border-slate-200 bg-sky-50 px-5 py-4"
               >
-                <span className="text-white">{language.name}</span>
-                <span className="text-cyan-400">{language.level}</span>
+                <span className="text-slate-900">{language.name}</span>
+                <span className="text-sky-700">{language.level}</span>
               </div>
             ))}
           </div>

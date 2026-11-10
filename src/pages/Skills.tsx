@@ -1,6 +1,7 @@
 
 import {
   BrainCircuit,
+  ShieldCheck,
   Code2,
   Database,
   Globe,
@@ -12,6 +13,7 @@ import SectionHeading from "../components/ui/SectionHeadings";
 import { skillGroups } from "../data/skills";
 
 const icons: Record<string, LucideIcon> = {
+  Security: ShieldCheck,
   "Programming Languages": Code2,
   "Frontend Development": Globe,
   "Backend & Databases": Database,
@@ -37,14 +39,14 @@ export default function Skills() {
             return (
               <article
                 key={group.category}
-                className="rounded-2xl border border-white/10 bg-slate-900/70 p-7 transition-colors hover:border-cyan-400/30"
+                className="rounded-2xl border border-slate-200 bg-slate-50 p-7 transition-colors hover:border-cyan-400/30"
               >
                 <div className="mb-6 flex items-center gap-4">
-                  <div className="rounded-xl bg-cyan-400/10 p-3 text-cyan-400">
+                  <div className="rounded-xl bg-cyan-400/10 p-3 text-sky-700">
                     <Icon size={24} />
                   </div>
 
-                  <h2 className="text-lg font-semibold text-white">
+                  <h2 className="text-lg font-semibold text-slate-900">
                     {group.category}
                   </h2>
                 </div>
@@ -53,7 +55,7 @@ export default function Skills() {
                   {group.skills.map((skill) => (
                     <span
                       key={skill}
-                      className="rounded-lg border border-white/10 bg-slate-800 px-4 py-2 text-sm text-slate-300 transition-colors hover:border-cyan-400/40 hover:text-cyan-300"
+                      className="rounded-lg border border-slate-200 bg-sky-100 px-4 py-2 text-sm text-slate-700 transition-colors hover:border-cyan-400/40 hover:text-sky-700"
                     >
                       {skill}
                     </span>
@@ -65,7 +67,7 @@ export default function Skills() {
         </div>
       </section>
 
-      <section className="rounded-3xl border border-white/10 bg-slate-900 p-8 md:p-12">
+      <section className="rounded-3xl border border-slate-200 bg-sky-50 p-8 md:p-12">
         <SectionHeading
           eyebrow="Professional Development"
           title="Continuously learning and building."
@@ -80,7 +82,7 @@ export default function Skills() {
           ].map((area) => (
             <div
               key={area}
-              className="rounded-xl border border-cyan-400/20 bg-cyan-400/5 p-5 text-sm font-medium text-cyan-200"
+              className="rounded-xl border border-cyan-400/20 bg-cyan-400/5 p-5 text-sm font-medium text-sky-800"
             >
               {area}
             </div>

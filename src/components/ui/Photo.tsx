@@ -20,7 +20,7 @@ export default function Photo({
       <div
         role="img"
         aria-label={alt}
-        className={`flex items-center justify-center bg-slate-800 text-slate-500 ${className}`}
+        className={`flex items-center justify-center bg-sky-100 text-slate-500 ${className}`}
       >
         <ImageIcon size={48} />
       </div>

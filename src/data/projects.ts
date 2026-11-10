@@ -4,6 +4,15 @@ import { images } from "./images";
 
 export const projects: Project[] = [
   {
+    id: 3,
+    title: "Meditrack",
+    role: "Developer",
+    description: "A system that helps drug shop and pharmacy owners track sales and business data, bringing day-to-day business information into one place.",
+    highlights: [],
+    technologies: [],
+    githubUrl: "https://github.com/Gaspardtj/meditrack",
+  },
+  {
     id: 1,
     title: "AgriLink",
     year: "2025",

@@ -1,4 +1,5 @@
 
+import { images } from "../../data/images";
 import { useState } from "react";
 import { NavLink } from "react-router";
 import { Menu, X } from "lucide-react";
@@ -8,13 +9,15 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/95 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-slate-200 bg-sky-100/95 backdrop-blur">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
         <NavLink
           to="/"
-          className="text-xl font-bold text-white"
+          className="block rounded-full ring-2 ring-white shadow-sm transition hover:ring-sky-500"
+          aria-label="Gaspard Tumusiime Jimmy — home"
+          onClick={() => { setIsOpen(false); window.scrollTo({ top: 0 }); }}
         >
-          Gaspard<span className="text-cyan-400">.</span>
+          <img src={images.profile} alt="Gaspard Tumusiime Jimmy" className="h-11 w-11 rounded-full object-cover object-[center_25%]" />
         </NavLink>
 
         <div className="hidden items-center gap-7 md:flex">
@@ -24,8 +27,8 @@ export default function Navbar() {
               to={item.path}
               className={({ isActive }) =>
                 isActive
-                  ? "text-cyan-400"
-                  : "text-slate-300 hover:text-cyan-400"
+                  ? "text-sky-700"
+                  : "text-slate-700 hover:text-sky-700"
               }
             >
               {item.label}
@@ -45,7 +48,7 @@ export default function Navbar() {
       </nav>
 
       {isOpen && (
-        <div className="flex flex-col gap-4 border-t border-white/10 px-6 py-5 md:hidden">
+        <div className="flex flex-col gap-4 border-t border-slate-200 px-6 py-5 md:hidden">
           {navigation.map((item) => (
             <NavLink
               key={item.path}
@@ -53,8 +56,8 @@ export default function Navbar() {
               onClick={() => setIsOpen(false)}
               className={({ isActive }) =>
                 isActive
-                  ? "text-cyan-400"
-                  : "text-slate-300 hover:text-cyan-400"
+                  ? "text-sky-700"
+                  : "text-slate-700 hover:text-sky-700"
               }
             >
               {item.label}

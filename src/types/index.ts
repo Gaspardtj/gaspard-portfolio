@@ -7,12 +7,12 @@ export interface NavigationItem {
 export interface Project {
   id: number;
   title: string;
-  year: string;
+  year?: string;
   role: string;
   description: string;
   highlights: string[];
   technologies: string[];
-  image: string;
+  image?: string;
   githubUrl?: string;
   liveUrl?: string;
 }

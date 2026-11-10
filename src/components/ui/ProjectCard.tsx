@@ -13,9 +13,9 @@ export default function ProjectCard({
   const [imageFailed, setImageFailed] = useState(false);
 
   return (
-    <article className="group overflow-hidden rounded-2xl border border-white/10 bg-slate-900/70 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/40">
-      <div className="relative flex h-56 items-center justify-center overflow-hidden bg-slate-800">
-        {!imageFailed ? (
+    <article className="group overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/40">
+      <div className="relative flex h-56 items-center justify-center overflow-hidden bg-sky-100">
+        {project.image && !imageFailed ? (
           <img
            src={project.image}
            alt={`${project.title} screenshot`}
@@ -33,17 +33,17 @@ export default function ProjectCard({
 
       <div className="p-6">
         <div className="mb-3 flex items-center justify-between gap-3">
-          <span className="text-sm text-cyan-400">
-            {project.role} · {project.year}
+          <span className="text-sm text-sky-700">
+            {project.role}{project.year ? ` · ${project.year}` : ""}
           </span>
           <ArrowUpRight className="text-slate-500" size={20} />
         </div>
 
-        <h3 className="mb-3 text-xl font-semibold text-white">
+        <h3 className="mb-3 text-xl font-semibold text-slate-900">
           {project.title}
         </h3>
 
-        <p className="mb-5 leading-7 text-slate-400">
+        <p className="mb-5 leading-7 text-slate-600">
           {project.description}
         </p>
 
@@ -51,7 +51,7 @@ export default function ProjectCard({
           {project.technologies.map((tech) => (
             <span
               key={tech}
-              className="rounded-full border border-cyan-400/20 bg-cyan-400/10 px-3 py-1 text-xs text-cyan-300"
+              className="rounded-full border border-cyan-400/20 bg-cyan-400/10 px-3 py-1 text-xs text-sky-700"
             >
               {tech}
             </span>
@@ -59,13 +59,13 @@ export default function ProjectCard({
         </div>
 
         {(project.githubUrl || project.liveUrl) && (
-          <div className="flex flex-wrap gap-4 border-t border-white/10 pt-4">
+          <div className="flex flex-wrap gap-4 border-t border-slate-200 pt-4">
             {project.githubUrl && (
               <a
                 href={project.githubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm text-white hover:text-cyan-400"
+                className="text-sm text-slate-900 hover:text-sky-700"
               >
                 View Code
               </a>
@@ -76,7 +76,7 @@ export default function ProjectCard({
                 href={project.liveUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-1 text-sm text-white hover:text-cyan-400"
+                className="flex items-center gap-1 text-sm text-slate-900 hover:text-sky-700"
               >
                 Live Demo <ExternalLink size={14} />
               </a>

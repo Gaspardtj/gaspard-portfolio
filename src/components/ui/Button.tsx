@@ -20,8 +20,8 @@ export default function Button({
   const classes =
     "inline-flex items-center justify-center gap-2 rounded-xl px-6 py-3 text-sm font-semibold transition-all duration-300 hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-400 " +
     (variant === "primary"
-      ? "bg-cyan-400 text-slate-950 hover:bg-cyan-300"
-      : "border border-white/20 bg-white/5 text-white hover:border-cyan-400/50 hover:bg-white/10");
+      ? "bg-sky-700 text-white hover:bg-sky-800"
+      : "border border-slate-300 bg-white/90 text-slate-900 hover:border-cyan-400/50 hover:bg-sky-50");
 
   if (to) {
     return (

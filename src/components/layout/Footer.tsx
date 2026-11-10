@@ -1,3 +1,4 @@
+import { profile } from "../../data/profile";
 
 import {
   FaGithub,
@@ -13,7 +14,7 @@ export default function Footer() {
   const socialLinks = [
     {
       name: "GitHub",
-      url: "https://github.com",
+      url: profile.github,
       icon: FaGithub,
     },
     {
@@ -23,12 +24,12 @@ export default function Footer() {
     },
     {
       name: "Instagram",
-      url: "https://instagram.com",
+      url: profile.instagram,
       icon: FaInstagram,
     },
     {
       name: "Facebook",
-      url: "https://facebook.com",
+      url: profile.facebook,
       icon: FaFacebook,
     },
     {
@@ -39,11 +40,11 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="border-t border-white/10 bg-slate-950 px-6 py-8">
+    <footer className="border-t border-slate-200 bg-sky-100 px-6 py-8">
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 md:flex-row">
 
-        <p className="text-sm text-slate-400">
-          © {new Date().getFullYear()} Gaspard Tumusiime.
+        <p className="text-sm text-slate-600">
+          © {new Date().getFullYear()} {profile.name}.
           All rights reserved.
         </p>
 
@@ -57,7 +58,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               aria-label={name}
               title={name}
-              className="text-xl text-slate-400 transition-colors duration-300 hover:text-cyan-400"
+              className="text-xl text-slate-600 transition-colors duration-300 hover:text-sky-700"
             >
               <Icon />
             </a>
@@ -67,7 +68,7 @@ export default function Footer() {
             href="mailto:gaspard.tumus@gmail.com"
             aria-label="Email"
             title="Email"
-            className="text-xl text-slate-400 transition-colors duration-300 hover:text-cyan-400"
+            className="text-xl text-slate-600 transition-colors duration-300 hover:text-sky-700"
           >
             <Mail size={20} />
           </a>
